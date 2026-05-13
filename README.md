@@ -30,23 +30,36 @@
 
 ------
 
-## Highlights
+## ✨ Highlights
 
-- **Tool-using AHD agent:** Proactively uses tools in multi-turn heuristic generation.
-- **Agentic RL training:** Learns from synthesized AHD environments with multi-domain training.
-- **Efficient and generalizable:** A 4B agent outperforms larger-model baselines across various domains.
+<table>
+  <tr>
+    <td width="33%" align="center">
+      <h3>🛠️ New Agentic Framework</h3>
+      <p> Proactively calls tools and uses feedback during heuristic generation.</p>
+    </td>
+    <td width="33%" align="center">
+      <h3>🎯 Agentic RL Training</h3>
+      <p> Learns heuristic design from synthesized AHD environments across multiple domains.</p>
+    </td>
+    <td width="33%" align="center">
+      <h3>⚡ Efficient & Generalizable</h3>
+      <p>A compact 4B agent outperforms larger-model baselines across diverse design settings.</p>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## Agent Loop
 
+## 🔁 Agent Loop
 
-AHD Agent keeps an interaction history and makes state-dependent decisions over multiple turns. The agent can:
+AHD Agent maintains an interaction history and makes **state-dependent decisions** over multiple turns. At each step, the agent can decide to:
 
-1. generate or revise a heuristic,
-2. evaluate the candidate heuristic on a design set,
-3. call tools to collect targeted feedback,
-4. continue the design process or return the final heuristic.
+1. 🧪 **Generate or revise** a candidate heuristic;
+2. 📈 **Evaluate** the heuristic on a design set;
+3. 🔍 **Call tools** to collect targeted feedback;
+4. ✅ **Continue refining** or return the final heuristic.
 
 <p align="center">
   <a href="figure/workflow.png">
@@ -61,13 +74,14 @@ AHD Agent keeps an interaction history and makes state-dependent decisions over 
 
 
 
-## Results
+## 📊 Results
 
-We evaluate AHD Agent across eight settings spanning constructive heuristics, ant-colony-optimization heuristics, held-out combinatorial domains, and cost-aware Bayesian optimization.
+We evaluate AHD Agent across different settings, including constructive heuristics, ant-colony-optimization heuristics, held-out combinatorial domains, and cost-aware Bayesian optimization.
 
 ### Efficient Design-Time Convergence
 
-On RL training domains, the agent reaches competitive or superior gaps with only about **11-15 evaluator calls** in the short setting. The design-time convergence curves show that AHD Agent improves quickly under limited evaluation budgets and continues to benefit when the budget is expanded.
+On RL training domains, the agent reaches competitive or superior gaps with only about **11–15 evaluator calls** in the short setting.  
+The design-time convergence curves show that AHD Agent improves quickly under limited evaluation budgets and continues to benefit when the budget is expanded.
 
 <p align="center">
   <a href="figure/training_curves.png">
@@ -99,7 +113,7 @@ The RL-trained agent generalizes beyond the domains used during training. As the
 
 <p align="center">
   <a href="figure/cross_domain_training.png">
-    <img src="figure/cross_domain_training.png" width="60%" alt="Cross-domain RL training">
+    <img src="figure/cross_domain_training.png" width="40%" alt="Cross-domain RL training">
   </a>
 </p>
 
@@ -122,7 +136,27 @@ AHD Agent can also be enhanced at inference time by increasing the evaluator bud
 </p>
 
 
+## 🔖 Citation
 
-## Contact
+If you find our model, data, or evaluation code useful, please kindly cite our paper:
+```bib
+@article{lv2026ahdagent,
+  title   = {AHD Agent: Agentic Reinforcement Learning for Automatic Heuristic Design},
+  author  = {Lv, Haoze and Lu, Ning and Zhou, Ziang and Liu, Shengcai},
+  journal = {arXiv preprint arXiv:2605.08756},
+  year    = {2026}
+}
+```
+
+## 📬 Contact
 
 For questions about the paper, please contact Shengcai Liu at <liusc3@sustech.edu.cn>.
+
+---
+
+<div align="center">
+
+<strong>🧠 AHD Agent: agentic, tool-integrated, and reinforcement-learned heuristic design.</strong>
+
+</div>
+
